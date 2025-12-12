@@ -158,8 +158,11 @@ html {
     font-size: 45px;
 }
      .content .main-btn{
-   padding:8px;
-   font-size: 15px;
+   font-size: 9px;
+   margin-top: 10px;
+}
+    .loader-wrapper{
+    font-size: 70px;
 }
 }
 
