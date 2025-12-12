@@ -1,0 +1,487 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* الحالة عند الإخفاء */
+.loader-wrapper.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+/* إعدادات صفحة التحميل */
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+background:#c42a2a;
+  transition: opacity 1.5s linear, visibility 1.5s linear;
+  font-size: 140px;
+ color:#dfa048;
+  font-weight: bold;
+}
+
+/* إعدادات الحروف */
+.loader-letter {
+  display: inline-block;
+  opacity: 0;
+  z-index: 2;
+  animation: fade 1.2s linear infinite;
+}
+
+/* تأخير بسيط لكل حرف */
+.loader-letter:nth-child(1) { animation-delay: 0.1s;   }
+.loader-letter:nth-child(2) { animation-delay: 0.205s; }
+.loader-letter:nth-child(3) { animation-delay: 0.31s;  }
+.loader-letter:nth-child(4) { animation-delay: 0.415s; }
+.loader-letter:nth-child(5) { animation-delay: 0.521s; }
+.loader-letter:nth-child(6) { animation-delay: 0.626s; }
+.loader-letter:nth-child(7) { animation-delay: 0.731s; }
+.loader-letter:nth-child(8) { animation-delay: 0.837s; }
+
+/* حركة ظهور واختفاء الحروف */
+@keyframes fade {
+  0%, 100% { opacity: 0; transform: translateY(10px); }
+  50% { opacity: 1; transform: translateY(0); }
+}
+
+/* التأثير الخلفي */
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: transparent;
+  mask: repeating-linear-gradient(90deg, transparent 0, transparent 6px, black 7px, black 8px);
+}
+
+body {
+    font-family: "Cairo", serif;
+}
+ .navbar-dark .navbar-toggler {
+    color:red;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* الوضع المخفي قبل الظهور */
+.hidden-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+/* الوضع بعد الظهور */
+.show-section {
+  opacity: 1;
+  transform: translateY(0);
+}
+ 
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link{
+    color: #dfa048;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+        color: #dfa048;
+}
+.navbar-dark .navbar-nav .nav-link{
+        color:#fff;
+}
+/* title content */
+.content .title1{
+    font-size: 90px;
+      color:#dfa048;
+}
+.content .title1:hover{
+    color:#c42a2a;
+}
+
+.content .title2:hover{
+     color:#c42a2a;
+}
+
+.content .title2{
+    font-size: 80px;
+}
+
+  .content .main-btn:hover{
+     background: none;
+     color: #fff;
+  }
+.main-btn1:hover{
+    background-color: #fff;
+    color:#caad71;
+}
+ .content {
+    z-index: 1;
+    
+} 
+.content p{
+    font-size: 20px;
+}
+@media (max-width: 1200px) {
+   .content .title1{
+        font-size: 70px !important;
+    }
+    
+   .content .title2{
+    font-size: 70px;
+}
+
+}
+@media (max-width: 768px) {
+    .content .title1{
+        font-size: 60px !important;
+    }
+     .content .title2{
+    font-size: 55px;
+}
+    .content .main-btn{
+   padding:10px 20px;
+   font-size: 15px;
+ }
+}
+
+@media (max-width: 576px) {
+ .content .title1{
+        font-size: 50px !important;
+    }
+      
+   .content .title2{
+    font-size: 45px;
+}
+     .content .main-btn{
+   padding:8px;
+   font-size: 15px;
+}
+}
+
+ .icon{
+    color: #d73535;
+ }
+  
+
+    .hero {
+    height:100vh; 
+    background-image: url(../pic/ChatGPT\ Image\ Dec\ 1\,\ 2025\,\ 12_54_45\ PM.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+} 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+ .hero1 {
+    background-image:url(../pic/ChatGPT\ Image\ Dec\ 1\,\ 2025\,\ 12_54_45\ PM.png); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    z-index: 0;
+}
+
+.navbar{
+    position: relative;
+    z-index: 2;
+}
+.gifts .container{
+    z-index: 2;
+}
+
+/* ----- ANIMATIONS ----- */
+.fade-in {
+    animation: fadeIn 1.2s ease forwards;
+    opacity: 0;
+}
+
+.slide-up {
+    animation: slideUp 1.2s ease forwards;
+    opacity: 0;
+}
+@keyframes fadeIn {
+    from {  transform: translateY(40px); opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* start card */
+.gifts .card{
+    margin-top: 15px;
+}
+.gifts .card:hover {
+     transform: translateY(-10px);
+    transition: 0.3s ease;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+.pricing .card:hover{
+     transform: translateY(20px);
+    transition: 0.3s ease;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+ .paravideo{
+    font-size: 20px;
+   line-height: 1.6;
+   width: 80%;
+   margin: 0 auto 20px;
+   color:#6a6a6a;
+ }
+.gifts .section-description{
+   font-size: 20px;
+   line-height: 1.6;
+   width: 80%;
+   margin: 0 auto 20px;
+   color:#6a6a6a;
+}
+.about .section-description{
+   font-size: 20px;
+   line-height: 1.6;
+   width: 80%;
+   margin: 0 auto 20px;
+   color:#6a6a6a;
+}
+.about .main-btn:hover{
+    background-color:#dfa048;;
+}
+
+.gifts .card .card-title{
+    font-size: 20px;
+    line-height: 1.5;
+    color:#08526d;
+}
+.gifts .card{
+    margin-bottom: 30px;
+}
+.gifts .card .card-text{
+    color:#787878;
+    margin-bottom: 5px;
+}
+.gifts .main-btn:hover{
+    background-color: #dfa048;
+}
+/* end card */
+/*  start pricing */
+.pricing{
+    padding: 100px 0 100px;
+    background-color: #f7f7f7;
+}
+.pricing h2{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.pricing .section-description{
+   font-size: 20px;
+   line-height: 1.6;
+   width: 80%;
+   margin: 0 auto 20px;
+   color:#6a6a6a;
+}
+.pricing .card .card-title{
+    font-size: 25px;
+    line-height: 1.5;
+    color:#08526d;
+    margin-top: 30px;
+}
+.pricing .card{
+    margin-bottom: 30px;
+    margin-top: 10px;
+    border-radius: 5%;
+}
+.pricing .card .card-text{
+    color:#fff;
+    font-size: 30px;
+    margin-bottom: 5px;
+    background-color: #caad71;
+    padding: 20px;
+    margin: 30px 0;
+    font-weight: bold;
+}
+.pricing .card .card-text span{
+    font-size: 18px;
+}
+.pricing .Corpporate {
+    position: relative;
+    top:-20px;
+}
+.pricing .Corpporate .card-text{
+    background-color:#d73535 ;
+}
+.pricing .Corpporate .card-link{
+    background-color: #caad71;
+}
+/* end pricing */
+
+/* start slider */
+.testimonial-box {
+    border-left: 4px solid #f00;
+}
+
+.underline {
+    width: 60px;
+    height: 3px;
+    background: #f00;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    background-color: #f00;
+}
+.bi{
+    color:#f00
+}
+.image1{
+    border-radius:50%;
+    height: 300px;
+    width: 330px;
+}
+ .picture {
+    position: relative;
+    height: 400px;
+}
+.footer .main-btn:hover{
+    color: #000;
+    border: none;
+    background-color: #caad71;
+}
+.picture .main-btn2{
+    border: none;
+    color:#fff;
+    background-color:#c42a2a;
+}
+.picture .main-btn2:hover{
+     color: #000;
+    border: none;
+    background-color: #caad71;
+}
+.footer .main-btn2{
+       background-color:#c42a2a;
+       color: #fff;
+}
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.content1 {
+    z-index: 2;
+}
+.content1 .main-btn{
+    background-color: #caad71;
+}
+/* end slider */
+ 
+ .footer{
+    background-image: url(../pic/ChatGPT\ Image\ Dec\ 1\,\ 2025\,\ 12_54_45\ PM.png); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    z-index: 0;
+}  
+.about .container{
+     position: relative; 
+    z-index: 2;
+}
+.slider .container{
+     position: relative;
+    z-index: 2;
+}
+.contact .container{
+    position: relative; 
+    z-index: 2;
+}
+.footer .container {
+    position: relative; 
+    z-index: 2; 
+}
+.footer1 .container{
+    position: relative;
+    z-index: 2;
+}
+.footer .copyright > span {
+    color: var(--green-color);
+}
+.footer .copyright div span{
+    color:var(--yellow-color);
+}
+.footer .contact ul svg{
+    width: 20px;
+    height: 20px;
+}
+.footer .facebook{
+    background-color: #1877f2;
+}
+.footer .twitter{
+    background-color: #1da1f2;
+}
+.footer .linkedin{
+    background-color: #0077b5;
+}
+.footer .youtube{
+    background-color:#ff0000;
+}
+
+.footer1 .copyright > span {
+    color: var(--green-color);
+}
+.footer1 .copyright div span{
+    color:var(--yellow-color);
+}
+.footer1 .contact ul svg{
+    width: 20px;
+    height: 20px;
+}
+.footer1 .facebook{
+    background-color: #1877f2;
+}
+.footer1 .twitter{
+    background-color: #1da1f2;
+}
+.footer1 .linkedin{
+    background-color: #0077b5;
+}
+.footer1 .youtube{
+    background-color:#ff0000;
+}
+
