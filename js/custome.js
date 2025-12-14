@@ -37,7 +37,7 @@ window.addEventListener("load", function() {
         setTimeout(() => {
           loaderWrapper.style.display = "none"; // إزالة العنصر نهائيًا
           content.style.display = "block"; // إظهار المحتوى
-        }, 200);
+        }, 100);
       }, 10000);
     });
 
