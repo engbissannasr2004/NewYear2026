@@ -147,6 +147,9 @@ html {
    padding:10px 20px;
    font-size: 15px;
  }
+     .loader-wrapper{
+    font-size: 90px;
+}
 }
 
 @media (max-width: 576px) {
