@@ -340,13 +340,13 @@ html {
 
 /* start Features */
 
+.Features .card {
+    background-color: #caad71; ;
+}
+
 .Features .container{
     position: relative;
     z-index: 2;
-}
-
-.Features .card {
-     background-color: #caad71;
 }
 
 .Features .bi1{
