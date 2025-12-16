@@ -337,6 +337,22 @@ html {
 }
 /* end pricing */
 
+
+/* start Features */
+.Features .card {
+    background-color: #ccc;
+}
+
+.Features .bi1{
+  color:#fff;
+  background-color:#d73535;
+}
+.Features .bi2{
+ color:#fff;
+  background-color:#d73535;
+}
+/* end Features */
+
 /* start slider */
 .testimonial-box {
     border-left: 4px solid #f00;
