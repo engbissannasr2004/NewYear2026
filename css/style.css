@@ -339,6 +339,12 @@ html {
 
 
 /* start Features */
+
+.Features .container{
+    position: relative;
+    z-index: 2;
+}
+
 .Features .card {
     background-color: #ccc;
 }
